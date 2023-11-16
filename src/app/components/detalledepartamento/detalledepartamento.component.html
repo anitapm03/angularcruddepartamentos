@@ -1,0 +1,11 @@
+<div>
+    <h1 style="color: blue">Detalle del departamento</h1>
+    
+    <div *ngIf="depto">
+        <h2>ID departamento: {{depto.idDepartamento}}</h2>
+        <h2>Nombre departamento: {{depto.nombre}}</h2>
+        <h3>Localidad: {{depto.localidad}}</h3>
+    </div>
+
+    <a [routerLink]="['/']" class="btn btn-info">Volver</a>
+</div>

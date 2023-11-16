@@ -1,0 +1,32 @@
+<div>
+    <h1>Lista de departamentos: </h1>
+
+    <hr>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let depto of departamentos">
+                <td>{{depto.idDepartamento}}</td>
+                <td>{{depto.nombre}}</td>
+                <td>{{depto.localidad}}</td>
+                <td>
+                    <a [routerLink]="['/detalle/'+depto.idDepartamento]"
+                    class="btn btn-outline-info">Detalle</a>
+                    <a [routerLink]="['/editar/'+depto.idDepartamento]"
+                    class="btn btn-outline-success">Modificar</a>
+                    <a [routerLink]="['/eliminar/'+depto.idDepartamento]"
+                    class="btn btn-outline-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

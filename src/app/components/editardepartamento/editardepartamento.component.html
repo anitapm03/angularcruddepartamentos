@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="depto">
+        <h1 style="color: blue;">Modificar departamento: {{depto.idDepartamento}}</h1>
+
+        <form #editarForm="ngForm">
+            
+            <label>Nombre departamento: </label>
+            <input type="text" name="cajanombre" #cajanombre 
+            class="form-control"/>
+            <br>
+            <label>Localidad departamento: </label>
+            <input type="text" name="cajalocalidad" #cajalocalidad 
+            class="form-control"/>
+            <br>
+            <button class="btn btn-outline-info"
+            (click)="editarDepartamento()">Modificar!</button>
+        </form>
+
+    </div>
+    
+</div>
